@@ -19,19 +19,20 @@ require("lazy").setup({
     {"ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-            vim.cmd.colorscheme("gruvbox")
+        vim.cmd.colorscheme("gruvbox")
     end,
     },
 
     -- fzf
     {"ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-            local fzf = require("fzf-lua")
+    },
 
-            vim.keymap.set("n", "<leader>ff", fzf.files)
-            vim.keymap.set("n", "<leader>fb", fzf.buffers)
-            vim.keymap.set("n", "<leader>fh", fzf.help_tags)
+    -- java utils
+    {'nvim-java/nvim-java',
+    config = function()
+        require('java').setup()
+        vim.lsp.enable('jdtls')
     end,
     },
 
