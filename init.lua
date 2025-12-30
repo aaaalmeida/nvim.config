@@ -1,6 +1,5 @@
--- import 
-require("plugins")
-require("autocommands")
-require("keybinds")
-require("config")
+require("config.keymap")
+require("core.lazy")
+require("config.options")
+require("config.autocommands")
 

@@ -14,27 +14,5 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-    -- gruvbox theme
-    {"ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    config = function()
-        vim.cmd.colorscheme("gruvbox")
-    end,
-    },
-
-    -- fzf
-    {"ibhagwan/fzf-lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-
-    -- java utils
-    {'nvim-java/nvim-java',
-    config = function()
-        require('java').setup()
-        vim.lsp.enable('jdtls')
-    end,
-    },
-
-})
+require("lazy").setup("plugins")
 
