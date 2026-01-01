@@ -31,3 +31,13 @@ vim.opt.smartcase = true
 vim.opt.autoread = true
 vim.opt.updatetime = 300
 
+-- Nerd Font installed
+vim.g.have_nerd_font = true
+
+-- new splits will be open at botton and right side
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+-- minimal screen lines above or bellow cursor
+vim.opt.scrolloff = 5
+
