@@ -17,6 +17,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+        vim.keymap.set("n", "<leader>l", vim.diagnostic.open_float, opts)
 
         local wk = require("which-key")
         wk.add({
@@ -25,6 +26,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
             {"K", desc = "LSP: Hover Documentation"},
             {"<leader>rn", desc = "LSP: Rename on cursor"},
             {"<leader>ca", desc = "LSP: Code Action"},
+            {"<leader>l", desc = "LSP: Show errors"},
         })
     end,
 })

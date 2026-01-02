@@ -41,3 +41,14 @@ vim.o.splitbelow = true
 -- minimal screen lines above or bellow cursor
 vim.opt.scrolloff = 5
 
+-- inline errors
+vim.diagnostic.config({
+    virtual_text = {
+        spacing = 2
+    },
+    update_in_text = false,
+    severity_sort = true,
+    signs = true
+})
+vim.diagnostic.enable(true)
+
