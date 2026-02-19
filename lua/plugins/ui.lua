@@ -2,12 +2,20 @@ return {
     -- gruvbox theme
     {
 	    "ellisonleao/gruvbox.nvim",
+        --[[
         priority = 1000,
         config = function()
             vim.cmd.colorscheme("gruvbox")
         end,
+        --]]
     },
-
+    -- kanagawa theme
+    {
+        "rebelot/kanagawa.nvim",
+        config = function()
+            vim.cmd("colorscheme kanagawa-dragon")
+        end
+    },
     -- lua line
     {
         "nvim-lualine/lualine.nvim",
